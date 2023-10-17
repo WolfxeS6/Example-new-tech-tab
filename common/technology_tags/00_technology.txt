@@ -108,6 +108,7 @@ technology_categories = {
 	cat_mountaineers_doctrine
 	cat_marines_doctrine
 	cat_paratroopers_doctrine
+	newtech_tech
 
 	mio_cat_tech_light_armor_and_modules #Includes modules and stand-alone Amphibious Chassis
 	mio_cat_tech_medium_armor_and_modules #Includes modules and Modern Tank
@@ -129,6 +130,9 @@ technology_categories = {
 
 technology_folders = {
 	infantry_folder = {
+		ledger = army
+	}
+	newtech_folder = {
 		ledger = army
 	}
 	support_folder = {
