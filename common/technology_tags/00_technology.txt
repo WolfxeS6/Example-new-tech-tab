@@ -43,6 +43,7 @@ technology_categories = {
 	cv_tech
 	bc_tech
 	bb_tech
+	cwis_tech
 	shbb_tech
 	ss_tech
 	tp_tech
@@ -53,6 +54,7 @@ technology_categories = {
 	computing_tech
 	radar_tech
 	infantry_tech
+	drone_tech
 	marine_tech
 	construction_tech
 	excavation_tech
@@ -92,23 +94,15 @@ technology_categories = {
 	cat_production
 	cat_synth_rubber
 	cat_synth_oil
-	cat_armored_cars
-	cat_special_forces_generic
-	cat_torpedoes
-	cat_ship_light_battery
-	cat_ship_medium_battery
-	cat_ship_heavy_battery
-	air_equipment
 	plane_modules_tech
 	cat_air_guns
-	cat_air_engine
 	cat_air_bombs
+	cat_air_engine
 	special_forces_doctrine
 	cat_maritime_patrol
 	cat_mountaineers_doctrine
 	cat_marines_doctrine
 	cat_paratroopers_doctrine
-	newtech_tech
 
 	mio_cat_tech_light_armor_and_modules #Includes modules and stand-alone Amphibious Chassis
 	mio_cat_tech_medium_armor_and_modules #Includes modules and Modern Tank
@@ -126,6 +120,7 @@ technology_categories = {
 	mio_cat_tech_all_carrier_and_modules #Includes CV and all related modules
 	mio_cat_tech_all_cruiser_and_modules #Includes all CA (+ Coastal etc.), CL (Torpedo Cruiser) and all related modules
 	mio_cat_tech_all_destroyer_and_modules #Includes all DD and all related modules
+	newtech_tech
 }
 
 technology_folders = {
@@ -136,6 +131,9 @@ technology_folders = {
 		ledger = army
 	}
 	support_folder = {
+		ledger = army
+	}
+	motorised_folder = {
 		ledger = army
 	}
 	armour_folder = {
@@ -160,9 +158,7 @@ technology_folders = {
 		ledger = air
 	}
 	bba_air_techs_folder = {
-		available = {
-			has_dlc = "By Blood Alone"
-		}
+		available = { has_dlc = "By Blood Alone" }
 		ledger = air
 	}
 	naval_folder = {
@@ -172,12 +168,6 @@ technology_folders = {
 		ledger = navy
 	}
 	mtgnavalfolder = {
-		available = {
-			has_dlc = "Man the Guns"
-		}
-		ledger = navy
-	}
-	mtgnavalsupportfolder = {
 		available = {
 			has_dlc = "Man the Guns"
 		}
