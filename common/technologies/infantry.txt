@@ -801,7 +801,9 @@ technologies = {
 	### NIGHT VISION ###
 grenade_launcher = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        grenade_launcher_equipment_0
+    }
     
     path = {
         leads_to_tech = grenade_launcher2
@@ -844,7 +846,9 @@ grenade_launcher = {
 
 grenade_launcher2 = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        grenade_launcher_equipment_1
+    }
     
     path = {
         leads_to_tech = grenade_launcher3
@@ -887,7 +891,9 @@ grenade_launcher2 = {
 
 grenade_launcher3 = {
 
-    land_night_attack = 0.1
+    enable_equipments = {
+        grenade_launcher_equipment_2
+    }
     
     path = {
         leads_to_tech = grenade_launcher4
@@ -930,7 +936,9 @@ grenade_launcher3 = {
 
 grenade_launcher4 = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        grenade_launcher_equipment_3
+    }
     
     path = {
         leads_to_tech = grenade_launcher5
