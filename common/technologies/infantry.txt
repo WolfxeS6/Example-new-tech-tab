@@ -1,0 +1,5012 @@
+# Written and edited by E. Wolfe #
+
+@1985 = 0
+@1990 = 3
+@1995 = 6
+@2000 = 9
+@2005 = 12
+@2010 = 15
+@2015 = 18
+@2020 = 21
+@2025 = 24
+@2030 = 27
+
+technologies = {
+	
+	### INFANTRY WEAPONS ###
+	infantry_weapons1 = {
+		
+		enable_equipments = {
+			infantry_equipment_1
+		}
+		
+		enable_subunits = {
+			infantry
+			vet_infantry
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1985
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = -1 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 40
+				date > "1990.1.1"
+			}
+		}
+	}
+	
+	infantry_weapons2 = {
+		
+		enable_equipments = {
+			infantry_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = upgraded_infantry_weapons1
+			research_cost_coeff = 1
+		}	
+		research_cost = 2
+		start_year = 1990
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1990 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+				date > "2005.1.3"
+			}
+			modifier = {
+				factor = 10
+				is_major = yes
+			}
+			modifier = {
+				factor = 0.5
+				tag = SOV
+			}
+			modifier = {
+				factor = 0.5
+				tag = PRC
+			}
+		}
+	}	
+	
+	upgraded_infantry_weapons1 = {
+		
+		category_light_infantry = {
+			soft_attack = 0.05
+		}
+		motorized = {
+			soft_attack = 0.05
+		}
+		mechanized = {
+			soft_attack = 0.05
+		}
+		amphibious_mechanized = {
+			soft_attack = 0.05
+		}
+		
+		path = {
+			leads_to_tech = upgraded_infantry_weapons2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1995
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1995 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	
+	upgraded_infantry_weapons2 = {
+		
+		category_light_infantry = {
+			soft_attack = 0.05
+		}
+		motorized = {
+			soft_attack = 0.05
+		}
+		mechanized = {
+			soft_attack = 0.05
+		}
+		amphibious_mechanized = {
+			soft_attack = 0.05
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons3
+			research_cost_coeff = 1
+		}
+	
+		research_cost = 3
+		start_year = 2000
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2000 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "2010.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2020.1.1"
+			}
+			modifier = {
+				factor = 5
+				date > "2017.1.1"
+			}
+		}
+	}
+	infantry_weapons3 = {
+		
+		enable_equipments = {
+			infantry_equipment_3
+		}
+		
+		path = {
+			leads_to_tech = upgraded_infantry_weapons3
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 2005
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2005 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 10
+				date > "2020.1.1"
+			}
+			modifier = {
+				factor = 10
+				is_major = yes
+			}
+			modifier = {
+				factor = 0.5
+				tag = SOV
+			}
+			modifier = {
+				factor = 0.5
+				tag = PRC
+			}
+		}
+	}
+	upgraded_infantry_weapons3 = {
+		
+		category_light_infantry = {
+			breakthrough = 0.05
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 3.5
+		start_year = 2010
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2010 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2026.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2027.1.1"
+			}
+			modifier = {
+				factor = 5
+				date > "2028.1.1"
+			}
+		}
+	}
+	
+	infantry_weapons4 = {
+		
+		enable_equipments = {
+			infantry_equipment_4
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons5
+			research_cost_coeff = 1
+		}	
+		research_cost = 3
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2015 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 10
+				date > "2025.1.1"
+			}
+			modifier = {
+				num_of_military_factories > 30
+				factor = 2.5
+			}
+			modifier = {
+				num_of_military_factories < 10
+				factor = 0.5
+			}
+		}
+	}
+	
+	infantry_weapons5 = {
+		
+		enable_equipments = {
+			infantry_equipment_5
+		}
+		
+		path = {
+			leads_to_tech = infantry_weapons6
+			research_cost_coeff = 1
+		}
+		research_cost = 3.5
+		start_year = 2020
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2020 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	infantry_weapons6 = {
+		
+		enable_equipments = {
+			infantry_equipment_6
+		}
+		
+		path = {
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 3.5
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2025 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### SUPPORT WEAPONS ###
+	support_weapons = {
+
+		category_all_infantry = {
+			default_morale = 0.02
+		}
+		
+		path = {
+			leads_to_tech = support_weapons2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1985
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1985 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 15
+
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = SOV
+					tag = GER
+					tag = FRA
+					tag = CAN
+					tag = PRC
+				}
+			}
+			modifier = {
+				factor = 2
+				date > "2001.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1995.1.6"
+			}
+			
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+	}
+	
+	support_weapons2 = {
+
+		category_all_infantry = {
+			max_organisation = 1
+			defense = 1
+		}
+		
+		path = {
+			leads_to_tech = support_weapons3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1995
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1995 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+
+				OR = {
+					tag = USA
+					tag = ENG
+					tag = SOV
+					tag = GER
+					tag = FRA
+					tag = CAN
+					tag = PRC
+				}
+			}
+			modifier = {
+				factor = 2
+				date > "2001.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1995.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "2003.1.6"
+			}
+			
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+	}
+	
+	support_weapons3 = {
+
+		category_all_infantry = {
+			hard_attack = 0.1
+		}
+		category_light_infantry = {
+			ap_attack = 0.6
+		}
+		
+		path = {
+			leads_to_tech = support_weapons4
+			research_cost_coeff = 1
+		}#EW
+		
+		research_cost = 2
+		start_year = 2005
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2005 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2005.1.6"
+			}
+			modifier = {
+				factor = 2
+				date > "2007.1.6"
+			}
+			modifier = {
+				factor = 2
+				date > "2010.1.6"
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+	}
+	
+	support_weapons4 = {
+
+		category_all_infantry = {
+			hard_attack = 0.1
+		}
+		category_light_infantry = {
+			ap_attack = 0.6
+		}
+		
+		path = {
+			leads_to_tech = support_weapons5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2015 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2009.1.6"
+			}
+			modifier = {
+				factor = 2
+				date > "2010.1.6"
+			}
+			modifier = {
+				factor = 5
+				date > "2011.1.6"
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+	}
+	
+	support_weapons5 = {
+
+		category_all_infantry = {
+			air_attack = 0.1
+		}
+		
+		
+		research_cost = 2
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2025 }
+		}
+		
+		categories = {
+			infantry_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2005.1.6"
+			}
+			modifier = {
+				factor = 2
+				date > "2005.1.6"
+			}
+			modifier = {
+				factor = 5
+				date > "2007.1.6"
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+	}
+	
+	
+	### NIGHT VISION ###
+	night_vision = {
+
+		land_night_attack = 0.05
+		
+		path = {
+			leads_to_tech = night_vision2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 1985
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1985 }
+		}
+		
+		categories = {
+			night_vision
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+			modifier = {
+				factor = 2
+				date > "1985.1.1"
+			}
+			modifier = {
+				factor = 3
+				date > "1985.1.1"
+				is_major = yes
+			}
+			modifier = {
+				factor = 2
+				date > "1990.1.1"
+			}
+			modifier = {
+				factor = 5
+				date > "2001.1.1"
+			}
+		}
+	}
+	
+	night_vision2 = {
+
+		land_night_attack = 0.05
+		
+		path = {
+			leads_to_tech = night_vision3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1995
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1995 }
+		}
+		
+		categories = {
+			night_vision
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+			modifier = {
+				factor = 2
+				date > "2001.1.1"
+			}
+			modifier = {
+				factor = 3
+				date > "2001.1.1"
+				is_major = yes
+			}
+			modifier = {
+				factor = 2
+				date > "1995.1.1"
+			}
+			modifier = {
+				factor = 5
+				date > "2003.1.1"
+			}
+		}
+	}
+	
+	night_vision3 = {
+
+		land_night_attack = 0.1
+		
+		path = {
+			leads_to_tech = night_vision4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2005
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2005 }
+		}
+		
+		categories = {
+			night_vision
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+			modifier = {
+				factor = 2
+				date > "2007.1.1"
+			}
+			modifier = {
+				factor = 5
+				date > "2007.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2010.1.1"
+				is_major = yes
+			}
+			modifier = {
+				factor = 5
+				date > "2009.1.1"
+			}
+		}
+	}
+	
+	night_vision4 = {
+
+		land_night_attack = 0.05
+		
+		path = {
+			leads_to_tech = night_vision5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2015 }
+		}
+		
+		categories = {
+			night_vision
+		}
+		
+		ai_will_do = {
+			factor = 4
+			
+			modifier = {
+				factor = 2
+				date > "2017.1.1"
+			}
+			modifier = {
+				factor = 5
+				date > "2017.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2025.1.1"
+				is_major = yes
+			}
+			modifier = {
+				factor = 5
+				date > "2019.1.1"
+			}
+		}
+	}
+	
+	night_vision5 = {
+
+		land_night_attack = 0.1
+		
+
+		research_cost = 2
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2025 }
+		}
+		
+		categories = {
+			night_vision
+		}
+		
+		ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				factor = 2
+				date > "2021.1.1"
+			}
+			modifier = {
+				factor = 5
+				date > "2021.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2022.1.1"
+				is_major = yes
+			}
+			modifier = {
+				factor = 5
+				date > "2023.1.1"
+			}
+		}
+	}
+	### Grenade Launcher ###
+	### NIGHT VISION ###
+grenade_launcher = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = grenade_launcher2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        grenade_launcher
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+grenade_launcher2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = grenade_launcher3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        grenade_launcher
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+grenade_launcher3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = grenade_launcher4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        grenade_launcher
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+grenade_launcher4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = grenade_launcher5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        grenade_launcher
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+	### Rocket Proppeled Grenade Launcher ###
+	### NIGHT VISION ###
+rpg = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = rpg2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        rpg
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+rpg2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = rpg3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        rpg
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+rpg3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = rpg4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        rpg
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+rpg4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = rpg5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        rpg
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+rpg5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        rpg
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+	### Flamethrower ###
+	### NIGHT VISION ###
+flamethrowers = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = flamethrowers2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        flamethrowers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+flamethrowers2 = {
+
+    land_night_attack = 0.05
+    
+
+    research_cost = 2
+    start_year = 2010
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2010 }
+    }
+    
+    categories = {
+        flamethrowers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+	### ATGM ###
+	ATGM = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = ATGM2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        ATGM
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+ATGM2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = ATGM3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        ATGM
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+ATGM3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = ATGM4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        ATGM
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+ATGM4 = {
+
+    land_night_attack = 0.05
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        ATGM
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+### MANPADS
+
+MANPADS = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = MANPADS2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        MANPADS
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+MANPADS2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = MANPADS3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        MANPADS
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+MANPADS3 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2010
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2010 }
+    }
+    
+    categories = {
+        MANPADS
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+	### Hand Grenades ###
+	
+hand_grenade = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = hand_grenade2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        hand_grenade
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+hand_grenade2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = hand_grenade3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        hand_grenade
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+hand_grenade3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = hand_grenade4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        hand_grenade
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+hand_grenade4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = hand_grenade5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        hand_grenade
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+hand_grenade5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        hand_grenade
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+
+### Anti Tank Mine ###
+ 
+anti_tank_mine = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = anti_tank_mine2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        anti_tank_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+anti_tank_mine2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = anti_tank_mine3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        anti_tank_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+anti_tank_mine3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = anti_tank_mine4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        anti_tank_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+anti_tank_mine4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = anti_tank_mine5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        anti_tank_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+anti_tank_mine5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        anti_tank_mine
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+### Anti-Personnel Mine###
+
+ap_mine = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = ap_mine2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        ap_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+ap_mine2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = ap_mine3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        ap_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+ap_mine3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = ap_mine4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        ap_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+ap_mine4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = ap_mine5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        ap_mine
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+ap_mine5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        ap_mine
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+
+
+	### BODY ARMOR ###
+	body_armor = {
+
+		infantry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}		
+		mountaineers = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+		paratrooper = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+		marine = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+		motorized = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		mechanized = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		light_mechanized = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		amphibious_mechanized = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		path = {
+			leads_to_tech = body_armor2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1985
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1985 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "1985.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "1990.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2001.1.1"
+			}
+		}
+	}
+	
+	body_armor2 = {
+
+		infantry = {
+			defense = 0.03
+			breakthrough = 0.03
+		}		
+		mountaineers = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		paratrooper = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		marine = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		motorized = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		mechanized = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		light_mechanized = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		amphibious_mechanized = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		path = {
+			leads_to_tech = body_armor3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1995
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1995 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2001.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "1995.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2003.1.1"
+			}
+		}
+	}
+	
+	body_armor3 = {
+
+		infantry = {
+			defense = 0.05
+			breakthrough = 0.05
+		}	
+		mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		marine = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		motorized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		light_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		amphibious_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		
+		path = {
+			leads_to_tech = body_armor4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2005
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2005 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2005.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2005.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2007.1.1"
+			}
+		}
+	}
+	
+	body_armor4 = {
+
+		infantry = {
+			defense = 0.05
+			breakthrough = 0.05
+		}	
+		mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		marine = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		motorized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		light_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		amphibious_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		
+		path = {
+			leads_to_tech = body_armor5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2015 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2009.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2010.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2011.1.1"
+			}
+		}
+	}
+	
+	body_armor5 = {
+
+		infantry = {
+			defense = 0.05
+			breakthrough = 0.05
+		}		
+		mountaineers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		paratrooper = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		marine = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		motorized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		light_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		amphibious_mechanized = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		research_cost = 2
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2025 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2013.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2014.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2015.1.1"
+			}
+		}
+	}
+	### CAMOUFLAGE ###
+	camouflage = {
+	
+		land_reinforce_rate = 0.01
+		
+		path = {
+			leads_to_tech = camouflage2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1985
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1985 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "1985.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "1990.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2001.1.1"
+			}
+		}
+	}
+	
+	camouflage2 = {
+
+		max_dig_in = 1
+		
+		path = {
+			leads_to_tech = camouflage3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1995
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1995 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2003.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2000.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2005.1.1"
+			}
+		}
+	}
+	
+	camouflage3 = {
+
+		enemy_army_bonus_air_superiority_factor = -0.05
+		
+		path = {
+			leads_to_tech = camouflage4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2005
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2005 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2007.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2010.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2009.1.1"
+			}
+		}
+	}
+	
+	camouflage4 = {
+		
+		category_light_infantry = {
+			maximum_speed = 0.05
+		}
+		category_line_artillery = {
+			maximum_speed = 0.05
+		}
+		
+		path = {
+			leads_to_tech = camouflage5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2015
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2015 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2017.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2025.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2019.1.1"
+			}
+		}
+	}
+	
+	camouflage5 = {
+
+		special_forces_min = 10
+		special_forces_cap = 0.02
+
+		research_cost = 1.5
+		start_year = 2025
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @2025 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "2021.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2022.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2023.1.1"
+			}
+		}
+	}
+	### Combat Helmet ###
+	
+combat_helmet = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = combat_helmet2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        combat_helmet
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+combat_helmet2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = combat_helmet3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        combat_helmet
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+combat_helmet3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = combat_helmet4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        combat_helmet
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+combat_helmet4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = combat_helmet5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        combat_helmet
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+combat_helmet5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        combat_helmet
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+	### Gas Masks ###
+	
+gas_mask = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = gas_mask2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        gas_mask
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+gas_mask2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = gas_mask3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        gas_mask
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+gas_mask3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = gas_mask4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        gas_mask
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+gas_mask4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = gas_mask5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        gas_mask
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+gas_mask5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        gas_mask
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+	### Chemical Reconnaissance Device ###
+	
+chemical_reconnaissance_device = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = chemical_reconnaissance_device2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        chemical_reconnaissance_device
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+chemical_reconnaissance_device2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = chemical_reconnaissance_device3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        chemical_reconnaissance_device
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+chemical_reconnaissance_device3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = chemical_reconnaissance_device4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        chemical_reconnaissance_device
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+chemical_reconnaissance_device4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = chemical_reconnaissance_device5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        chemical_reconnaissance_device
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+chemical_reconnaissance_device5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        chemical_reconnaissance_device
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+	### Information Control & Communication System
+	
+information_control_system = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = information_control_system2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        information_control_system
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+information_control_system2 = {
+
+    land_night_attack = 0.05
+    
+
+    research_cost = 2
+    start_year = 2025
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        information_control_system
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+### Man-Portable Radar
+
+man_portable_radar = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = man_portable_radar2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 2010
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2010 }
+    }
+    
+    categories = {
+        man_portable_radar
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+man_portable_radar2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = man_portable_radar3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2020
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2020 }
+    }
+    
+    categories = {
+        man_portable_radar
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+man_portable_radar3 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2030
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2030 }
+    }
+    
+    categories = {
+        man_portable_radar
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+	### Laser RangeFinder ###
+	
+laser_rangefinder = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = laser_rangefinder2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        laser_rangefinder
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+laser_rangefinder2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = laser_rangefinder3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        laser_rangefinder
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+laser_rangefinder3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = laser_rangefinder4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        laser_rangefinder
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+laser_rangefinder4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = laser_rangefinder5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        laser_rangefinder
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+laser_rangefinder5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        laser_rangefinder
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+
+
+	
+	
+paratroopers = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = paratroopers2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        paratroopers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+paratroopers2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = paratroopers3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        paratroopers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+paratroopers3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = paratroopers4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        paratroopers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+paratroopers4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = paratroopers5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        paratroopers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+paratroopers5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        paratroopers
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+	
+marines = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = marines2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        marines
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+marines2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = marines3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        marines
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+marines3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = marines4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        marines
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+marines4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = marines5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        marines
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+marines5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        marines
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+	
+tech_mountaineers = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_mountaineers2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        tech_mountaineers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+tech_mountaineers2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_mountaineers3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1995
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1995 }
+    }
+    
+    categories = {
+        tech_mountaineers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+tech_mountaineers3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = tech_mountaineers4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2005
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2005 }
+    }
+    
+    categories = {
+        tech_mountaineers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+tech_mountaineers4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_mountaineers5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2015 }
+    }
+    
+    categories = {
+        tech_mountaineers
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+tech_mountaineers5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2015
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2025 }
+    }
+    
+    categories = {
+        tech_mountaineers
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+	
+tech_special_forces = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_special_forces2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2.5
+    start_year = 1985
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1985 }
+    }
+    
+    categories = {
+        tech_special_forces
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "1985.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "1985.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1990.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2001.1.1"
+        }
+    }
+}
+
+tech_special_forces2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_special_forces3
+        research_cost_coeff = 1
+    }
+	path = {
+        leads_to_tech = tech_special_forces_air2
+        research_cost_coeff = 1
+    }
+	path = {
+        leads_to_tech = tech_special_forces_marines2
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1990
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @1990 }
+    }
+    
+    categories = {
+        tech_special_forces
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+tech_special_forces3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = tech_special_forces4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2000
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2000 }
+    }
+    
+    categories = {
+        tech_special_forces
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+tech_special_forces4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_special_forces5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2010
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2010 }
+    }
+    
+    categories = {
+        tech_special_forces
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+tech_special_forces5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2020
+    folder = {
+        name = infantry_folder
+        position = { x = 0 y = @2020 }
+    }
+    
+    categories = {
+        tech_special_forces
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+### special forces air
+
+
+tech_special_forces_air2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_special_forces_air3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1990
+    folder = {
+        name = infantry_folder
+        position = { x = -2 y = @1990 }
+    }
+    
+    categories = {
+        tech_special_forces_air
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+tech_special_forces_air3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = tech_special_forces_air4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2000
+    folder = {
+        name = infantry_folder
+        position = { x = -2 y = @2000 }
+    }
+    
+    categories = {
+        tech_special_forces_air
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+tech_special_forces_air4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_special_forces_air5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2010
+    folder = {
+        name = infantry_folder
+        position = { x = -2 y = @2010 }
+    }
+    
+    categories = {
+        tech_special_forces_air
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+tech_special_forces_air5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2020
+    folder = {
+        name = infantry_folder
+        position = { x = -2 y = @2020 }
+    }
+    
+    categories = {
+        tech_special_forces_air
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+### special forces marines
+
+
+tech_special_forces_marines2 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_special_forces_marines3
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 1990
+    folder = {
+        name = infantry_folder
+        position = { x = 2 y = @1990 }
+    }
+    
+    categories = {
+        tech_special_forces_marines
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2001.1.1"
+        }
+        modifier = {
+            factor = 3
+            date > "2001.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 2
+            date > "1995.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2003.1.1"
+        }
+    }
+}
+
+tech_special_forces_marines3 = {
+
+    land_night_attack = 0.1
+    
+    path = {
+        leads_to_tech = tech_special_forces_marines4
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2000
+    folder = {
+        name = infantry_folder
+        position = { x = 2 y = @2000 }
+    }
+    
+    categories = {
+        tech_special_forces_marines
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2007.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2010.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2009.1.1"
+        }
+    }
+}
+
+tech_special_forces_marines4 = {
+
+    land_night_attack = 0.05
+    
+    path = {
+        leads_to_tech = tech_special_forces_marines5
+        research_cost_coeff = 1
+    }
+
+    research_cost = 2
+    start_year = 2010
+    folder = {
+        name = infantry_folder
+        position = { x = 2 y = @2010 }
+    }
+    
+    categories = {
+        tech_special_forces_marines
+    }
+    
+    ai_will_do = {
+        factor = 4
+        
+        modifier = {
+            factor = 2
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2017.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2025.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2019.1.1"
+        }
+    }
+}
+
+tech_special_forces_marines5 = {
+
+    land_night_attack = 0.1
+    
+
+    research_cost = 2
+    start_year = 2020
+    folder = {
+        name = infantry_folder
+        position = { x = 2 y = @2020 }
+    }
+    
+    categories = {
+        tech_special_forces_marines
+    }
+    
+    ai_will_do = {
+        factor = 3
+        
+        modifier = {
+            factor = 2
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 5
+            date > "2021.1.1"
+        }
+        modifier = {
+            factor = 2
+            date > "2022.1.1"
+            is_major = yes
+        }
+        modifier = {
+            factor = 5
+            date > "2023.1.1"
+        }
+    }
+}
+}
+# Written and edited by Wolfxe #
