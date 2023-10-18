@@ -22,7 +22,6 @@ technologies = {
 		
 		enable_subunits = {
 			infantry
-			vet_infantry
 		}
 		
 		path = {
@@ -34,7 +33,7 @@ technologies = {
 		start_year = 1985
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = -1 }
+			position = { x = 0 y = @1985 }
 		}
 		
 		categories = {
@@ -96,17 +95,8 @@ technologies = {
 	
 	upgraded_infantry_weapons1 = {
 		
-		category_light_infantry = {
-			soft_attack = 0.05
-		}
-		motorized = {
-			soft_attack = 0.05
-		}
-		mechanized = {
-			soft_attack = 0.05
-		}
-		amphibious_mechanized = {
-			soft_attack = 0.05
+		enable_equipments = {
+			infantry_equipment_3
 		}
 		
 		path = {
@@ -132,18 +122,9 @@ technologies = {
 	
 	
 	upgraded_infantry_weapons2 = {
-		
-		category_light_infantry = {
-			soft_attack = 0.05
-		}
-		motorized = {
-			soft_attack = 0.05
-		}
-		mechanized = {
-			soft_attack = 0.05
-		}
-		amphibious_mechanized = {
-			soft_attack = 0.05
+
+		enable_equipments = {
+			infantry_equipment_4
 		}
 		
 		path = {
@@ -182,7 +163,7 @@ technologies = {
 	infantry_weapons3 = {
 		
 		enable_equipments = {
-			infantry_equipment_3
+			infantry_equipment_5
 		}
 		
 		path = {
@@ -223,8 +204,8 @@ technologies = {
 	}
 	upgraded_infantry_weapons3 = {
 		
-		category_light_infantry = {
-			breakthrough = 0.05
+		enable_equipments = {
+			infantry_equipment_6
 		}
 		
 		path = {
@@ -264,7 +245,7 @@ technologies = {
 	infantry_weapons4 = {
 		
 		enable_equipments = {
-			infantry_equipment_4
+			infantry_equipment_7
 		}
 		
 		path = {
@@ -303,7 +284,7 @@ technologies = {
 	infantry_weapons5 = {
 		
 		enable_equipments = {
-			infantry_equipment_5
+			infantry_equipment_8
 		}
 		
 		path = {
@@ -328,7 +309,7 @@ technologies = {
 	infantry_weapons6 = {
 		
 		enable_equipments = {
-			infantry_equipment_6
+			infantry_equipment_9
 		}
 		
 		path = {
@@ -354,8 +335,8 @@ technologies = {
 	### SUPPORT WEAPONS ###
 	support_weapons = {
 
-		category_all_infantry = {
-			default_morale = 0.02
+		enable_equipments = {
+			machine_gun_equipment_1
 		}
 		
 		path = {
@@ -408,9 +389,8 @@ technologies = {
 	
 	support_weapons2 = {
 
-		category_all_infantry = {
-			max_organisation = 1
-			defense = 1
+		enable_equipments = {
+			machine_gun_equipment_2
 		}
 		
 		path = {
@@ -469,11 +449,8 @@ technologies = {
 	
 	support_weapons3 = {
 
-		category_all_infantry = {
-			hard_attack = 0.1
-		}
-		category_light_infantry = {
-			ap_attack = 0.6
+		enable_equipments = {
+			machine_gun_equipment_3
 		}
 		
 		path = {
@@ -516,11 +493,8 @@ technologies = {
 	
 	support_weapons4 = {
 
-		category_all_infantry = {
-			hard_attack = 0.1
-		}
-		category_light_infantry = {
-			ap_attack = 0.6
+		enable_equipments = {
+			machine_gun_equipment_4
 		}
 		
 		path = {
@@ -563,8 +537,8 @@ technologies = {
 	
 	support_weapons5 = {
 
-		category_all_infantry = {
-			air_attack = 0.1
+		enable_equipments = {
+			machine_gun_equipment_5
 		}
 		
 		
@@ -605,7 +579,9 @@ technologies = {
 	### NIGHT VISION ###
 	night_vision = {
 
-		land_night_attack = 0.05
+		enable_equipments = {
+			sniper_equipment_1
+		}
 		
 		path = {
 			leads_to_tech = night_vision2
@@ -648,7 +624,9 @@ technologies = {
 	
 	night_vision2 = {
 
-		land_night_attack = 0.05
+		enable_equipments = {
+			sniper_equipment_2
+		}
 		
 		path = {
 			leads_to_tech = night_vision3
@@ -691,7 +669,9 @@ technologies = {
 	
 	night_vision3 = {
 
-		land_night_attack = 0.1
+		enable_equipments = {
+			sniper_equipment_3
+		}
 		
 		path = {
 			leads_to_tech = night_vision4
@@ -734,7 +714,9 @@ technologies = {
 	
 	night_vision4 = {
 
-		land_night_attack = 0.05
+		enable_equipments = {
+			sniper_equipment_4
+		}
 		
 		path = {
 			leads_to_tech = night_vision5
@@ -777,7 +759,9 @@ technologies = {
 	
 	night_vision5 = {
 
-		land_night_attack = 0.1
+		enable_equipments = {
+			sniper_equipment_5
+		}
 		
 
 		research_cost = 2
@@ -991,7 +975,9 @@ grenade_launcher4 = {
 	### NIGHT VISION ###
 rpg = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        rpg_equipment_0
+    }
     
     path = {
         leads_to_tech = rpg2
@@ -1034,7 +1020,9 @@ rpg = {
 
 rpg2 = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        rpg_equipment_1
+    }
     
     path = {
         leads_to_tech = rpg3
@@ -1077,7 +1065,9 @@ rpg2 = {
 
 rpg3 = {
 
-    land_night_attack = 0.1
+    enable_equipments = {
+        rpg_equipment_2
+    }
     
     path = {
         leads_to_tech = rpg4
@@ -1120,7 +1110,9 @@ rpg3 = {
 
 rpg4 = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        rpg_equipment_3
+    }
     
     path = {
         leads_to_tech = rpg5
@@ -1163,7 +1155,9 @@ rpg4 = {
 
 rpg5 = {
 
-    land_night_attack = 0.1
+    enable_equipments = {
+        rpg_equipment_4
+    }
     
 
     research_cost = 2
@@ -1286,6 +1280,9 @@ flamethrowers2 = {
 	ATGM = {
 
     land_night_attack = 0.05
+    enable_equipments = {
+        anti_tank_equipment_0
+    }
     
     path = {
         leads_to_tech = ATGM2
@@ -1328,13 +1325,14 @@ flamethrowers2 = {
 
 ATGM2 = {
 
-    land_night_attack = 0.05
     
     path = {
         leads_to_tech = ATGM3
         research_cost_coeff = 1
     }
-
+    enable_equipments = {
+        anti_tank_equipment_1
+    }
     research_cost = 2
     start_year = 1995
     folder = {
@@ -1371,7 +1369,9 @@ ATGM2 = {
 
 ATGM3 = {
 
-    land_night_attack = 0.1
+    enable_equipments = {
+        anti_tank_equipment_2
+    }
     
     path = {
         leads_to_tech = ATGM4
@@ -1414,7 +1414,9 @@ ATGM3 = {
 
 ATGM4 = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        anti_tank_equipment_3
+    }
     
 
     research_cost = 2
@@ -1454,7 +1456,9 @@ ATGM4 = {
 
 MANPADS = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        manpad_equipment_0
+    }
     
     path = {
         leads_to_tech = MANPADS2
@@ -1497,7 +1501,9 @@ MANPADS = {
 
 MANPADS2 = {
 
-    land_night_attack = 0.05
+    enable_equipments = {
+        manpad_equipment_1
+    }
     
     path = {
         leads_to_tech = MANPADS3
@@ -1540,7 +1546,9 @@ MANPADS2 = {
 
 MANPADS3 = {
 
-    land_night_attack = 0.1
+    enable_equipments = {
+        manpad_equipment_2
+    }
     
 
     research_cost = 2
